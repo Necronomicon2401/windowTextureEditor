@@ -76,7 +76,7 @@ public class MyEditorWindow : EditorWindow
         {
             for (int x = 0; x < texture.width; x++)
             {
-                Color color = _boxesColors[sideSize * x + y];
+                Color color = _boxesColors[(sideSize - 1 - y) + (sideSize * x)];
                 texture.SetPixel(x, y, color);
             }
         }
